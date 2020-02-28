@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'hdan0hc6obr#edv3-pa3_4+ksrx11#*%m%(va9b8h&l-fjwyvl'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', '0.0.0.0', 'custom-portal-admin-demo.azurewebsites.net']
 
@@ -161,9 +161,8 @@ SUIT_CONFIG = {
     # 'LIST_PER_PAGE': 15
 }
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
-# STATIC_ROOT = '/Users/cai/cai/project2/escalator_poc/static'  # 新增行
-STATIC_ROOT = os.path.join(BASE_DIR, 'static1')
 
 STATICFILES_DIRS = (BASE_DIR + '/static',)
 
