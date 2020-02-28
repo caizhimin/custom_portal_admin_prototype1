@@ -78,17 +78,16 @@ WSGI_APPLICATION = 'custom_portal_admin_prototype.wsgi.application'
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.mysql',
-    #     'NAME': 'custom_portal_admin_prototype',
-    #     'user': "root"
-    #
-    # }
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        'user': ""
-
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'custom_portal_admin',
+            'USER': 'cai@escalatorpocdb',
+            'PASSWORD': '1Q2w3e4r',
+            'HOST': 'escalatorpocdb.mysql.database.azure.com',
+            'PORT': '3306',
+            'OPTIONS': {
+                'init_command': 'SET sql_mode=STRICT_TRANS_TABLES',
+            },
     }
 }
 
@@ -165,7 +164,7 @@ SUIT_CONFIG = {
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = (BASE_DIR + '/static',)
+# STATICFILES_DIRS = (BASE_DIR + '/static',)
 
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
