@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['127.0.0.1', '0.0.0.0', 'custom-portal-admin-demo.azurewebsites
 # Application definition
 
 INSTALLED_APPS = [
+    'whitenoise.runserver_nostatic',
     'data_model_app',
     'suit',
     'django.contrib.admin',
