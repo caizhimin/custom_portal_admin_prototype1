@@ -127,7 +127,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
-STATIC_URL = '/static/'
 
 
 
@@ -160,3 +159,24 @@ SUIT_CONFIG = {
     # misc
     # 'LIST_PER_PAGE': 15
 }
+
+STATIC_URL = '/static/'
+# STATIC_ROOT = '/Users/cai/cai/project2/escalator_poc/static'  # 新增行
+STATIC_ROOT = os.path.join(BASE_DIR, 'static1')
+
+STATICFILES_DIRS = (BASE_DIR + '/static',)
+
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    # 'django.contrib.staticfiles.finders.DefaultStorageFinder',
+)
+
+# STATIC_ROOT = os.path.join(os.path.dirname(__file__), '..', 'static')
+# print('STATIC_ROOT', STATIC_ROOT)
+
+
+try:
+    from .local_settings import *
+except :
+    pass
