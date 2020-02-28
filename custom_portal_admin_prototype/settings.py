@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'hdan0hc6obr#edv3-pa3_4+ksrx11#*%m%(va9b8h&l-fjwyvl'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', '0.0.0.0', 'custom-portal-admin-demo.azurewebsites.net']
 
